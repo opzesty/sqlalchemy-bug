@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  sqlalchemytest:
+    build: .
+    env_file: ./database.env
+    networks:
+      - testnetwork
+
+  database:
+    image: mysql
+    env_file: ./database.env
+    networks:
+      - testnetwork
+
+networks:
+  testnetwork:
