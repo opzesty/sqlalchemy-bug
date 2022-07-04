@@ -11,7 +11,7 @@ host =  os.environ.get('MYSQL_HOST')
 port = os.environ.get('MYSQL_PORT')
 db = os.environ.get('MYSQL_DATABASE')
 
-mysql_string = 'mysql+mysqldb://' + user + ':' + password + '@' + host + ':' + port  + '/' + db
+mysql_string = 'mysql+mysqlconnector://' + user + ':' + password + '@' + host + ':' + port  + '/' + db
 
 engine = create_engine(mysql_string, pool_pre_ping=True)
 

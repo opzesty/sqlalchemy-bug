@@ -1,6 +1,6 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.10
 
-RUN pip3 install sqlalchemy mysqlclient
+RUN pip3 install sqlalchemy mysql-connector-python
 
 WORKDIR /app
 
