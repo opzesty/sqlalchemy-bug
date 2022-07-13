@@ -4,6 +4,9 @@ services:
   sqlalchemytest:
     build: .
     env_file: ./database.env
+#    stdin_open: true
+#    tty: true
+#    entrypoint: /bin/sh
     networks:
       - testnetwork
 
